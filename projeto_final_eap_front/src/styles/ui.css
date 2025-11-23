@@ -1,0 +1,72 @@
+/* Simple, modern dark/light theme for auth pages */
+
+.auth-page {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem;
+}
+
+.auth-card {
+  width: 100%;
+  max-width: 420px;
+  background: linear-gradient(180deg, rgba(255,255,255,0.03), rgba(255,255,255,0.01));
+  border: 1px solid rgba(255,255,255,0.04);
+  border-radius: 12px;
+  padding: 1.6rem;
+  box-shadow: 0 6px 24px rgba(2,6,23,0.6);
+  color: inherit;
+}
+
+.auth-card h2 {
+  margin: 0 0 1rem 0;
+  font-size: 1.4rem;
+}
+
+.auth-field {
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+  margin-bottom: 0.9rem;
+}
+
+.auth-field label {
+  font-size: 0.9rem;
+  opacity: 0.85;
+}
+
+.auth-field input {
+  padding: 0.7rem 0.9rem;
+  border-radius: 8px;
+  border: 1px solid rgba(255,255,255,0.06);
+  background: rgba(255,255,255,0.02);
+  color: inherit;
+  font-size: 1rem;
+}
+
+.auth-actions {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+  margin-top: 0.6rem;
+}
+
+.btn-primary {
+  background: linear-gradient(90deg,#6c6cff,#8b91ff);
+  color: white;
+  border: none;
+  padding: 0.65rem 1rem;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: 600;
+}
+.btn-primary:hover { filter: brightness(1.05) }
+
+.link-muted { color: rgba(255,255,255,0.75); font-size: 0.95rem }
+.error { color: #ff6b6b; margin-top: 0.6rem }
+
+@media (prefers-color-scheme: light) {
+  .auth-card { background: linear-gradient(180deg, #fff, #fafafa); border: 1px solid rgba(0,0,0,0.06); color: #111 }
+  .auth-field input { background: #fff }
+}
